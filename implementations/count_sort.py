@@ -10,9 +10,9 @@ import sys
 def count_sort(data):
     data_size = len(data)
     unique_els = list(set(data))
-    unique_els.sort()
+    max_el = max(unique_els)
     n_unique_els = len(unique_els)
-    counts = [0] * n_unique_els
+    counts = [0] * max_el
 
     for j in range(data_size):
         j_index = unique_els.index(data[j])
