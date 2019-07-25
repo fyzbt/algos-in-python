@@ -7,11 +7,10 @@ import sys
 
 
 def lis_mod(sequence):
-    D = [0] * len(sequence)
+    D = [1] * len(sequence)
     ans = 0
 
     for i in range(len(sequence)):
-        D[i] = 1
         for j in range(i):
             if sequence[j] <= sequence[i] and D[j] + 1 > D[i] and sequence[i] % sequence[j] == 0:
                 D[i] = D[j] + 1
